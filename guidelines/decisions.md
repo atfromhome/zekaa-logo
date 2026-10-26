@@ -24,7 +24,7 @@ Produk Zekaa Give, Zekaa Flow, Zekaa Impact, Zekaa Care, dan aplikasi Zekaaqu ti
 | Sudut luar radius 6, sudut dalam tajam | Siluet lebih ramah tanpa menebalkan lipatan. Membulatkan sudut dalam menaikkan tebal lipatan kanan dari 1,49× ke 1,65× batang |
 | Pendaratan diagonal di y 156 | Menyisakan kaki tiang setebal batang sehingga terbaca sebagai balok yang disengaja |
 
-Lipatan kanan sengaja masih lebih tebal dari siku kiri (lingkaran terbesar di tinta 1,49× dan 1,32× batang, dibanding 1,16× di siku kiri). Semua cara menurunkannya tanpa mengubah tebal batang atau sudut kotak sudah dicoba.
+Lipatan kanan sengaja masih lebih tebal dari siku kiri (lingkaran terbesar di tinta 1,49× dan 1,32× batang, dibanding 1,16× di siku kiri). Cara menurunkannya tanpa mengubah tebal batang atau sudut kotak sudah dicoba dan ditolak.
 
 | Percobaan | Kenapa ditolak |
 |---|---|
@@ -35,7 +35,7 @@ Lipatan kanan sengaja masih lebih tebal dari siku kiri (lingkaran terbesar di ti
 
 ## Lockup berubin
 
-Mark lepas setinggi huruf kapital di samping kata terbaca sebagai huruf Z kedua: "ZZekaa". Mark yang diperbesar, kata huruf kecil, dan kata yang lebih ringan sudah dicoba. Ubin dipilih karena membingkai mark sebagai simbol, tetap kuat di latar gelap, dan sama persis dengan favicon dan app icon, sehingga satu bentuk dipakai di semua tempat.
+Mark lepas setinggi huruf kapital di samping kata terbaca sebagai huruf Z kedua: "ZZekaa". Mark yang diperbesar, kata huruf kecil, dan kata yang lebih ringan sudah dicoba. Ubin membingkai mark sehingga terbaca sebagai simbol, tetap terlihat di latar gelap, dan sama persis dengan favicon dan app icon.
 
 ## Warna
 

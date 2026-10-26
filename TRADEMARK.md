@@ -1,6 +1,6 @@
 # Ketentuan merek
 
-Nama Zekaa, logo, ubin, dan mark Zekaa adalah merek dan hak cipta milik Zekaa. Berkas di repo ini dipublikasikan supaya pihak lain dapat **merujuk Zekaa** dengan benar. Repo ini tidak memberi lisensi untuk memakai merek Zekaa di luar ketentuan berikut.
+Nama Zekaa, logo, ubin, dan mark Zekaa adalah merek dan hak cipta milik Zekaa. Berkas di repo ini dipublikasikan supaya pihak lain dapat merujuk Zekaa dengan benar. Repo ini tidak memberi lisensi untuk memakai merek Zekaa di luar ketentuan berikut.
 
 ## Boleh
 

@@ -4,16 +4,16 @@
 
 | Bentuk | Berkas | Dipakai untuk |
 |---|---|---|
-| **Logo utama** | [logo/horizontal/](../logo/horizontal/) | Bawaan di mana pun: header situs, console, email, dokumen, slide, kwitansi |
-| **Bertumpuk** | [logo/stacked/](../logo/stacked/) | Bidang yang mendekati bujur sangkar: sampul, kartu, poster |
-| **Ubin saja** | [tile/](../tile/) | Favicon, app icon termasuk Zekaaqu, avatar media sosial |
-| **Mark lepas** | [mark/](../mark/) | Hanya bidang besar: sampul, banner, merchandise, tanda air |
+| Logo utama | [logo/horizontal/](../logo/horizontal/) | Bentuk bawaan: header situs, console, email, dokumen, slide, kwitansi |
+| Bertumpuk | [logo/stacked/](../logo/stacked/) | Bidang yang mendekati bujur sangkar: sampul, kartu, poster |
+| Ubin saja | [tile/](../tile/) | Favicon, app icon termasuk Zekaaqu, avatar media sosial |
+| Mark lepas | [mark/](../mark/) | Hanya bidang besar: sampul, banner, merchandise, tanda air |
 
 Bila ada kata di sampingnya, mark selalu berada di dalam ubin. Mark lepas setinggi huruf kapital di samping kata terbaca sebagai huruf Z kedua: "ZZekaa".
 
 ## Satuan
 
-Semua jarak memakai **u = ¼ sisi ubin**.
+Semua jarak memakai satuan u, yaitu ¼ sisi ubin.
 
 | Bagian | Ukuran |
 |---|---|
