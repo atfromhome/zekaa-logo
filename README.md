@@ -1,9 +1,9 @@
-# Logo Zekaa
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="logo/horizontal/zekaa-logo-horizontal-dark.svg">
-  <img alt="Zekaa" src="logo/horizontal/zekaa-logo-horizontal.svg" height="72">
-</picture>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="logo/horizontal/zekaa-logo-horizontal-dark.svg">
+    <img alt="Zekaa" src="logo/horizontal/zekaa-logo-horizontal.svg" height="72">
+  </picture>
+</p>
 
 Berkas resmi logo Zekaa, platform untuk lembaga zakat yang menghimpun, mengelola, dan menyalurkan dana.
 
