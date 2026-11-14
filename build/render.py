@@ -32,6 +32,9 @@ RASTERS = [
     ("logo/horizontal/zekaa-logo-horizontal-inverse.svg", "png/zekaa-logo-horizontal-inverse-2400.png", 2400, None),
     ("logo/stacked/zekaa-logo-stacked.svg", "png/zekaa-logo-stacked-1200.png", 1200, None),
     ("logo/stacked/zekaa-logo-stacked-dark.svg", "png/zekaa-logo-stacked-dark-1200.png", 1200, None),
+    ("logo/horizontal/zekaa-logo-horizontal.svg", "email/zekaa-logo-email.png", 332, 88),
+    ("tile/zekaa-tile.svg", "email/zekaa-tile-email.png", 32, 32),
+    ("social/zekaa-og.svg", "social/zekaa-og.png", 1200, 630),
 ]
 
 ICO_SOURCES = ["web/favicon-16.png", "web/favicon-32.png", "web/favicon-48.png"]
