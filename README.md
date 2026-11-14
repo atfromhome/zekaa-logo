@@ -21,6 +21,9 @@ Pemakaian merek diatur di [TRADEMARK.md](TRADEMARK.md).
 | [mark/](mark/) | Mark lepas: Arus, hitam, putih | Bidang besar tanpa kata: banner, merchandise, tanda air |
 | [web/](web/) | `favicon.svg`, `favicon.ico`, PNG favicon 16/32/48, `apple-touch-icon.png`, PNG PWA 192/512, `maskable-512.png`, `site.webmanifest`, `head-snippet.html` | Ikon situs |
 | [png/](png/) | Ubin, avatar, mark, dan logo dalam resolusi tinggi | Aplikasi yang tidak menerima SVG |
+| [email/](email/) | Logo mendatar 332×88 dan ubin 32×32 dalam PNG | Kepala dan kaki email, yang tidak menampilkan SVG |
+| [social/](social/) | Gambar pratinjau tautan 1200×630: logo `-inverse` di latar Arus | `og:image` situs dan aplikasi |
+| [tokens/](tokens/) | `brand.json` dan `brand.css`: warna merek, putih, hitam, dan nama font | Sumber nilai merek untuk situs dan aplikasi |
 | [guidelines/](guidelines/) | Aturan pemakaian, warna, konstruksi, alasan desain | |
 | [build/](build/) | Sumber geometri dan script build | Membangun ulang semua berkas |
 
@@ -47,6 +50,23 @@ Logo mendatar dan bertumpuk masing-masing punya lima varian warna.
 
 Salin isi [web/](web/) ke akar situs, lalu tempel [web/head-snippet.html](web/head-snippet.html) ke `<head>`.
 
+## Token merek
+
+[tokens/brand.css](tokens/brand.css) dan [tokens/brand.json](tokens/brand.json) memuat set token yang sama dengan nilai yang sama. Isinya hanya primitif: warna di [guidelines/color.md](guidelines/color.md), putih, hitam, dan nama font. Token semantik seperti warna tombol atau latar halaman ditentukan tiap permukaan, bukan di sini.
+
+| Token | Nilai |
+|---|---|
+| `zekaa-arus` | `#0B7A64` |
+| `zekaa-arus-terang` | `#0E9D81` |
+| `zekaa-arang` | `#1C2624` |
+| `zekaa-putih` | `#FFFFFF` |
+| `zekaa-hitam` | `#000000` |
+| `zekaa-font` | `Plus Jakarta Sans` |
+
+## Memakai berkas ini di repo lain
+
+Repo ini satu-satunya sumber logo, turunannya, dan nilai token merek. Situs dan aplikasi menyalin berkas dari sini lewat script di repo masing-masing, tanpa menyunting hasil salinannya. Logo tidak digambar ulang dan nilai warna tidak diketik ulang. Kalau butuh ukuran atau turunan baru, tambahkan di [build/](build/) lalu salin hasilnya.
+
 ## Membangun ulang
 
 Semua SVG dibangun dari [build/mark.txt](build/mark.txt) (path mark) dan [build/wordmark.txt](build/wordmark.txt) (kata Zekaa sebagai kurva). Ubah kedua sumber itu, bukan SVG hasilnya.
@@ -56,6 +76,8 @@ python3 build/build.py
 python3 build/render.py
 ```
 
-`build.py` hanya butuh Python 3. `render.py` membuat PNG dan `favicon.ico` lewat Google Chrome atau Chromium headless.
+`build.py` hanya butuh Python 3. Selain SVG logo, ia menulis `tokens/brand.json`, `tokens/brand.css`, dan `social/zekaa-og.svg`. `render.py` membuat PNG dan `favicon.ico` lewat Google Chrome atau Chromium headless, termasuk tiga turunan di `email/` dan `social/`. Semuanya dirender dari SVG di repo ini.
+
+Turunan baru ditambahkan sebagai satu baris di daftar `RASTERS` pada `render.py`: sumber SVG, berkas tujuan, lebar, dan tinggi. Nilai token diubah di `build.py`, bukan di berkas hasilnya.
 
 Kata Zekaa digambar dari [Plus Jakarta Sans](https://github.com/tokotype/PlusJakartaSans) ExtraBold (800), dengan kerning bawaan font dan tracking −0,012 em, lalu diubah menjadi kurva. Font itu berlisensi SIL Open Font License ([build/OFL-PlusJakartaSans.txt](build/OFL-PlusJakartaSans.txt)).

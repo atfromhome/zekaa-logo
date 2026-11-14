@@ -6,6 +6,7 @@ ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / "build"
 
 ARUS = "#0B7A64"
+ARUS_TERANG = "#0E9D81"
 ARANG = "#1C2624"
 WHITE = "#FFFFFF"
 BLACK = "#000000"
@@ -22,6 +23,21 @@ WORD_INK_BOTTOM_FONT_UNITS = 12
 
 HORIZONTAL_CAP_HEIGHT = TILE * 2 / 3
 STACKED_CAP_HEIGHT = TILE / 3
+
+FONT_FAMILY = "Plus Jakarta Sans"
+
+TOKENS = {
+    "zekaa-arus": ARUS,
+    "zekaa-arus-terang": ARUS_TERANG,
+    "zekaa-arang": ARANG,
+    "zekaa-putih": WHITE,
+    "zekaa-hitam": BLACK,
+    "zekaa-font": FONT_FAMILY,
+}
+
+OG_WIDTH = 1200
+OG_HEIGHT = 630
+OG_TILE = 160
 
 MARK = (BUILD / "mark.txt").read_text().strip()
 WORD = (BUILD / "wordmark.txt").read_text().strip()
@@ -149,6 +165,35 @@ def mark(color):
     return svg(TILE, TILE, "Zekaa", f'<path fill="{color}" fill-rule="evenodd" d="{MARK}"/>')
 
 
+def og():
+    logo_width = TILE + U + word_width(HORIZONTAL_CAP_HEIGHT)
+    scale = OG_TILE / TILE
+    x = (OG_WIDTH - logo_width * scale) / 2
+    y = (OG_HEIGHT - OG_TILE) / 2
+    colors = COLORWAYS["-inverse"]
+    cap = HORIZONTAL_CAP_HEIGHT
+    logo = tile_body(0, 0, colors) + word_body(TILE + U, TILE / 2 + cap / 2, cap, word_color(colors))
+    body = (
+        f'<rect width="{OG_WIDTH}" height="{OG_HEIGHT}" fill="{ARUS}"/>'
+        f'<g transform="translate({num(x)} {num(y)}) scale({scale:.6f})">{logo}</g>'
+    )
+    return svg(OG_WIDTH, OG_HEIGHT, "Zekaa", body)
+
+
+def tokens_json():
+    return json.dumps(TOKENS, indent=2) + "\n"
+
+
+def tokens_css():
+    lines = [":root {"]
+    for name, value in TOKENS.items():
+        if name == "zekaa-font":
+            value = f'"{value}"'
+        lines.append(f"  --{name}: {value};")
+    lines.append("}")
+    return "\n".join(lines) + "\n"
+
+
 def manifest():
     data = {
         "name": "Zekaa",
@@ -194,6 +239,9 @@ def main():
     write("web/favicon.svg", tile(COLORWAYS[""]))
     write("web/site.webmanifest", manifest())
     write("web/head-snippet.html", HEAD_SNIPPET)
+    write("social/zekaa-og.svg", og())
+    write("tokens/brand.json", tokens_json())
+    write("tokens/brand.css", tokens_css())
 
 
 if __name__ == "__main__":
